@@ -1,11 +1,11 @@
 ---
 title: 'Mon premier article de blog'
 pubDate: 2023-05-08
-description: 'This is the first post of my new Astro blog.'
+description: 'Ceci est le premier article de mon nouveau blog Astro.'
 author: 'Astro Learner'
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png' 
-    alt: 'The full Astro logo.'
+    alt: 'Logo Astro'
 tags: ["astro", "blogging", "learning in public"]
 ---
 # Mon premier article de blog

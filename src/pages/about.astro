@@ -1,4 +1,28 @@
 ---
+const pageTitle = "A propos de moi";
+
+const identity = {
+    firstName: "Sarah",
+    country: "France",
+    occupation: "développeuse web",
+    hobbies: [
+        "le développement web",
+        "la marche",
+        "développer mes compétantces",
+    ],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Tailwind"];
+
+/* Variable "happy" initialisée à la valeur booléenne "true", qui indique que quelque chose est heureux ou vrai. */
+const happy = true;
+
+/* Variable "finished" initialisée à la valeur booléenne "false", qui indique que quelque chose n'est pas fini ou n'est pas vrai. */
+const finished = false;
+
+/* Variable "goal" et est initialisée à la valeur numérique "3". 
+Cette variable pourrait être utilisée pour représenter un objectif ou une cible à atteindre */
+const goal = 3;
 ---
 
 <html lang="en">
@@ -7,15 +31,14 @@
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
-        <title>Astro</title>
+        <title>{pageTitle}</title>
     </head>
     <body>
         <a href="/">Acceuil</a>
         <a href="/about/">A propos</a>
         <a href="/blog/">Blog</a>
 
-        <h1>Mon site Astro</h1>
-        <h1>À propos de moi</h1>
+        <h1>{pageTitle}</h1>
         <h2>... et mon nouveau site Astro !</h2>
         <p>
             Je suis en train de travailler sur le tutoriel d'introduction
@@ -27,5 +50,44 @@
             tutoriel, alors revenez régulièrement pour voir comment se déroule
             mon parcours !
         </p>
+
+        <p>Voici quelques faits à mon sujet</p>
+        <ul>
+            <li>
+                Je m'appelle {identity.firstName}.
+            </li>
+
+            <li>
+                Je vis en {identity.country} et je suis {identity.occupation}.
+            </li>
+            {
+                /* vérifie si la personne a au moins deux passe-temps et affiche deux de ces passe-temps 
+                 si c'est le cas. Si la condition est vraie, l'élément <li> est inclus dans la structure 
+                HTML, sinon il est ignoré. */
+
+                identity.hobbies.length >= 2 && (
+                    <li>
+                        Deux de mes hobbies sont: {identity.hobbies[0]} et{" "}
+                        {identity.hobbies[1]}
+                    </li>
+                )
+            }
+        </ul>
+        <p>Mes compétances sont:</p>
+        <ul>
+            {skills.map((skill) => <li>{skill}</li>)}
+        </ul>
+
+        {happy && <p>Je suis heureuse d'apprendre Astro</p>}
+
+        {finished && <p>J'ai terminé ce tutoriel</p>}
+
+        {
+            goal === 3 ? (
+                <p>MMon objectif est de finir en 3 jours.</p>
+            ) : (
+                <p>Mon objectif n'est pas 3 jours.</p>
+            )
+        }
     </body>
 </html>
