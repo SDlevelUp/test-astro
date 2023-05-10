@@ -19,7 +19,7 @@
 
 html {
     font-family: 'Roboto-Regular', sans-serif;
-    background: linear-gradient(45deg, #E5CCFF, #B39DDB, #8C71C9) fixed;
+    background: radial-gradient(circle, #b997cf, #9c7eae, #7f678e, #645070, #4a3a53) fixed;
 }
 
 body {
@@ -59,8 +59,8 @@ h1 {
     left: 48px;
     display: none;
     margin: 0;
-    background: linear-gradient(90deg, #1D3557 0%, #8A2BE2 50%, #1D3557 100%);
-    /* violet clair */
+    background: linear-gradient(90deg, #2D3047 0%, #1D3557 50%, #2D3047 100%);
+    /* bleu foncé */
 }
 
 .nav-links a {
@@ -119,6 +119,7 @@ h1 {
 
 .nav-links a:hover {
     color: #C0C0C0;
+    /* gris clair */
 }
 
 .nav-links a:hover::before {
@@ -126,6 +127,7 @@ h1 {
     transform-origin: bottom left;
     transition: width 0.25s ease-out;
     background-color: #C0C0C0;
+    /* gris clair */
 }
 
 .nav-links a:hover::after {
@@ -133,6 +135,7 @@ h1 {
     transform-origin: bottom right;
     transition: width 0.25s ease-out;
     background-color: #C0C0C0;
+    /* gris clair */
 }
 
 .expanded {
