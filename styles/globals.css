@@ -1,0 +1,159 @@
+/* Register your custom font family and tell the browser where to find it. */
+
+
+@font-face {
+    font-family: 'DistantGalaxy';
+    src: url('/public/fonts/DISTGRG_.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/public/fonts/Roboto-Regular.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    font-family: 'Roboto-Regular', sans-serif;
+    background: linear-gradient(45deg, #E5CCFF, #B39DDB, #8C71C9) fixed;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 80ch;
+    padding: 16px;
+    line-height: 1.5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 16px 0;
+    font-size: 40px;
+}
+
+.hamburger {
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: #FFFFFF;
+    /* blanc */
+}
+
+.nav-links {
+    width: 100%;
+    top: 5rem;
+    left: 48px;
+    display: none;
+    margin: 0;
+    background: linear-gradient(90deg, #1D3557 0%, #8A2BE2 50%, #1D3557 100%);
+    /* violet clair */
+}
+
+.nav-links a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    /* blanc */
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-links a::before,
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 35%;
+    height: 2px;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFFFFF;
+    /* blanc */
+    transition: width 0.25s ease-out;
+}
+
+.nav-links a.active::before,
+.nav-links a.active::after {
+    width: 100%;
+    transition: none;
+}
+
+.nav-links a:active::before,
+.nav-links a:active::after {
+    width: 100%;
+    transition: none;
+}
+
+.nav-links a:active::before,
+.nav-links a:active::after {
+    width: 100%;
+    transition: none;
+}
+
+.nav-links a::before {
+    transform-origin: bottom right;
+}
+
+.nav-links a::after {
+    transform-origin: bottom left;
+}
+
+.nav-links a:hover {
+    color: #C0C0C0;
+}
+
+.nav-links a:hover::before {
+    width: 70%;
+    transform-origin: bottom left;
+    transition: width 0.25s ease-out;
+    background-color: #C0C0C0;
+}
+
+.nav-links a:hover::after {
+    width: 70%;
+    transform-origin: bottom right;
+    transition: width 0.25s ease-out;
+    background-color: #C0C0C0;
+}
+
+.expanded {
+    display: unset;
+}
+
+@media screen and (min-width: 636px) {
+    .nav-links {
+        margin-left: 5em;
+        display: block;
+        position: static;
+        width: auto;
+        background: none;
+    }
+
+    .nav-links a {
+        display: inline-block;
+        padding: 15px 20px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}

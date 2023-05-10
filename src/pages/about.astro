@@ -1,4 +1,8 @@
 ---
+import "../../styles/globals.css";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
 const pageTitle = "A propos de moi";
 
 const identity = {
@@ -39,7 +43,7 @@ const textCase = "uppercase";
 
         <style define:vars={{ skillColor, fontWeight, textCase }}>
             h1 {
-                color: purple;
+                color: #f0f0f0;
                 font-size: 64px;
             }
             .skill {
@@ -50,9 +54,7 @@ const textCase = "uppercase";
         </style>
     </head>
     <body>
-        <a href="/">Acceuil</a>
-        <a href="/about/">A propos</a>
-        <a href="/blog/">Blog</a>
+        <Header />
 
         <h1>{pageTitle}</h1>
         <h2>... et mon nouveau site Astro !</h2>
@@ -105,5 +107,9 @@ const textCase = "uppercase";
         <ul>
             {skills.map((skill) => <li class="skill">{skill}</li>)}
         </ul>
+        <Footer />
+        <script>
+            import "../script/menu.js";
+        </script>
     </body>
 </html>

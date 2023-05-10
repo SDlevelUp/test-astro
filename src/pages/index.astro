@@ -1,4 +1,9 @@
 ---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
+import "../../styles/globals.css";
+
 const pageTitle = "Mon site Astro";
 ---
 
@@ -8,13 +13,15 @@ const pageTitle = "Mon site Astro";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+
 		<title>Astro</title>
 	</head>
 	<body>
-		<a href="/">Acceuil</a>
-		<a href="/about/">A propos</a>
-		<a href="/blog/">Blog</a>
-
+		<Header />
 		<h1>{pageTitle}</h1>
+		<Footer />
+		<script>
+			import "../script/menu.js";
+		</script>
 	</body>
 </html>
