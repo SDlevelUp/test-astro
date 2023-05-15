@@ -26,7 +26,7 @@ body {
     margin: 0 auto;
     width: 100%;
     max-width: 80ch;
-    padding: 16px;
+    padding: 1rem;
     line-height: 1.5;
 }
 
@@ -50,13 +50,12 @@ h1 {
     height: 5px;
     margin-bottom: 10px;
     background-color: #FFFFFF;
-    /* blanc */
 }
 
 .nav-links {
     width: 100%;
     top: 5rem;
-    left: 48px;
+    left: 50px;
     display: none;
     margin: 0;
     background: linear-gradient(90deg, #2D3047 0%, #1D3557 50%, #2D3047 100%);
@@ -81,7 +80,7 @@ h1 {
 .nav-links a::after {
     content: '';
     position: absolute;
-    width: 35%;
+    width: 25%;
     height: 2px;
     bottom: 8px;
     left: 50%;
