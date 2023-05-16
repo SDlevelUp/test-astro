@@ -2,6 +2,20 @@
 const { title, url } = Astro.props;
 ---
 
-<li>
+<li class="links-posts">
     <a href={url}>{title}</a>
 </li>
+
+<style>
+    .links-posts {
+        list-style-type: circle;
+        line-height: 2;
+        color: #c0c0c0;
+        font-weight: bold;
+    }
+
+    .links-posts a {
+        color: black;
+        text-decoration: none;
+    }
+</style>

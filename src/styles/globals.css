@@ -158,4 +158,25 @@ h1 {
     .hamburger {
         display: none;
     }
+
+    html.dark {
+
+        color: #fff;
+        background: rgb(36, 34, 34);
+    }
+
+    .dark .nav-links a {
+        color: #fff;
+
+    }
+
+    #greeting-button {
+        background-color: #824d9d;
+        border-radius: 8px;
+        border: solid 0.5px;
+        font-size: 1em;
+        padding: 12px 16px;
+        cursor: pointer;
+
+    }
 }

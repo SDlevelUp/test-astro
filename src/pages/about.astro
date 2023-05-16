@@ -14,37 +14,47 @@ const identity = {
     ],
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Tailwind"];
+const skills = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Astro",
+    "Tailwind",
+    "MongoDB",
+];
 
 /* Variable "happy" initialisée à la valeur booléenne "true", qui indique que quelque chose est heureux ou vrai. */
 const happy = true;
 
 /* Variable "finished" initialisée à la valeur booléenne "false", qui indique que quelque chose n'est pas fini ou n'est pas vrai. */
-const finished = false;
+const finished = true;
 
 /* Variable "goal" et est initialisée à la valeur numérique "3". 
 Cette variable pourrait être utilisée pour représenter un objectif ou une cible à atteindre */
 const goal = 3;
 
-const skillColor = "navy";
+const skillColor = "black";
 const fontWeight = "bold";
 const textCase = "uppercase";
 ---
 
 <style define:vars={{ skillColor, fontWeight, textCase }}>
     h1 {
-        color: #f0f0f0;
+        color: #c0c0c0;
         font-size: 64px;
     }
     .skill {
         color: var(--skillColor);
         font-weight: var(--fontWeight);
         text-transform: var(--textCase);
+        list-style-image: url("../public/moon.png");
+        transition: list-style-image 0.3s;
+        line-height: 2;
     }
 </style>
 
 <BaseLayout pageTitle={pageTitle}>
-    <h1>{pageTitle}</h1>
     <h2>... et mon nouveau site Astro !</h2>
     <p>
         Je suis en train de travailler sur le tutoriel d'introduction d'Astro.
